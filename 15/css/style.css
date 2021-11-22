@@ -1,3 +1,9 @@
+/*
+&display=swap
+&subset=cyrillic-ext
+*/
+/* @import url("https://fonts.googleapis.com/css?family=Roboto:regular,500,700,900&display=swap"); */
+
 /* -------------------- ОБНУЛЕНИЕ СТИЛЕЙ ----------------------- */
 *,
 *::before,
@@ -46,16 +52,11 @@ body {
 	min-height: 100%;
 	overflow: hidden;
 	/* padding: 20px; */
-	background-color: #f5f5f5;
 	display: flex;
 	flex-direction: column;
 }
 /* --------------------// ОБНУЛЕНИЕ СТИЛЕЙ //----------------------- */
 
-/*
-display=swap;
-subset=cyrillic-ext
-*/
 /*
 COLORS_0 {
 	color:#faed26
@@ -87,13 +88,18 @@ COLORS_1 {
 }
 
 [class*="__container"] {
-	max-width: 1050px;
+	max-width: 1020px;
 	margin: 0px auto;
 	padding: 0px 15px;
+	box-sizing: border-box;
 }
 
 /* общие классы */
-.header-logo {
+.headers {}
+.headers *:not(:last-child){
+	margin: 0px 0px 33px 0px;
+}
+.titles__logo {
 	font-size: 12px;
 	line-height: 2;
 	letter-spacing: 2.5px;
@@ -103,7 +109,7 @@ COLORS_1 {
 	font-weight: 700;
 	padding: 0px 0px 0px 33px;
 }
-.header-title {
+.titles__item {
 	font-size: 36px;
 	line-height: 1.17;
 	font-weight: 900;
@@ -121,36 +127,44 @@ COLORS_1 {
 	color: #4b4b4b;
 }
 
+
 /* section promise */
 .promise {
-	padding: 110px 0px 112px 0px;
+	padding: 110px 0px 122px 0px;
 }
-.promise__container {
-}
-.promise__headers {
+.promise__container {}
+.promise__header {
 	margin: 0px 0px 68px 0px;
 }
-.promise__logo {
+.promise__header *:not(:last-child){
 	margin: 0px 0px 33px 0px;
 }
-.promise__title {
-}
-.promise__body {
+.promise__items {
 	display: flex;
+	margin: 0px -12px;
+	flex-wrap: wrap;
+	row-gap: 24px;
 }
-/* .promise__row {
-} */
 .promise__item {
-	flex: 0 0 33.333%;
-	display: flex;
+	flex: 1 1 33.333%;
+	padding: 0px 12px;
+	min-width: 260px;
+
 }
 .item-promise {
+	display: flex;
+	align-items: flex-start;
+	/* align-items: flex-start; */ /* если картинка не в коробочке */
+	column-gap: 23px; /* можно не указывать для картинки в коробочке, тогда отступ включить в размер флекс-элемента */
 }
 .item-promise__icon {
+	flex: 0 0 63px;
 }
 .item-promise__body {
+	/* flex: 0 1 235px; */
 }
-.item-promise__title {
+.item-promise__body :not(:last-child){
+	margin: 0px 0px 20px 0px;
 }
-.item-promise__text {
-}
+.item-promise__title {}
+.item-promise__text {}
