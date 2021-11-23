@@ -168,3 +168,10 @@ COLORS_1 {
 }
 .item-promise__title {}
 .item-promise__text {}
+
+/* pup section */
+.pup {
+	background-color: #29C3BE;
+	height: 500px;
+}
+.pup__container {}
