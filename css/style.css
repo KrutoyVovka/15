@@ -140,7 +140,7 @@ COLORS_1 {
 	/* min-height: 48px; */
 	/* justify-content:center; */
 	/* align-items: center; */
-	/* text-align: center; */
+	text-align: center;
 	text-transform: uppercase;
 	background-color: #f2726f;
 	font-size: 12px;
@@ -152,6 +152,7 @@ COLORS_1 {
 	border-radius: 8px;
 	align-self: center;
 	transition: all 0.2s ease-in-out;
+	cursor: pointer;
 }
 .button:hover {
 	color: #fff;
@@ -355,6 +356,11 @@ COLORS_1 {
 	flex: 0 0 76px;
 	align-self: flex-start;
 }
+.item-impact__img {
+	max-width: 100%;
+	max-height: 76px;
+	/* height: 76px; */
+}
 .item-impact__body {
 	align-self: center;
 }
@@ -396,33 +402,60 @@ COLORS_1 {
 
 /* pup section */
 .pup {
-	display: flex;
 	background-color: #29c3be;
+	padding: 112px 0px 169px 0px;
+	background: url("../img/pup/blob_h.png") 0 0 no-repeat, url("../img/pup/сircles.svg") 0 100px no-repeat, #29c3be;
 	overflow: hidden;
 }
-.pup__left {
-	background: url("../img/pup/сircles.svg") 0 50% no-repeat;
-	flex: 0 0 50%;
-	align-self: flex-end;
+.pup__container {
 	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
+	justify-content: flex-end;
 	position: relative;
 }
-.pup__left::before {
+.pup__container::before {
 	content: "";
-	background: url("../img/pup/blob.png") 0 0 / 100% no-repeat;
+	position: absolute;
+	background: url("../img/pup/pup.png") 0 0 no-repeat;
+	top: -75px;
+	right: 50%;
+	width: 744px;
+	height: 545px;
+}
+.pup__body {
+	display: flex;
+	flex: 0 1 40%;
+	flex-direction: column;
+	position: relative;
+	z-index: 1;
+}
+.pup__body::before {
+	content: "";
+	background: url("../img/pup/line.svg") 0 0 no-repeat;
+	position: absolute;
+	z-index: -1;
+	top: -130px;
+	left: -100px;
+	width: 595px;
+	height: 387px;
+}
+.pup__body::after {
+	content: "";
+	background: url("../img/pup/tennis_ball.png") 0 0 no-repeat;
 	position: absolute;
 	top: 0;
-	left: 0;
-	transform: translate(-5%, -50%);
-	width: 48.5%;
-	height: 379px;
+	left: 100%;
+	width: 136px;
+	height: 136px;
 }
-.pup__left img {
-	max-width: 100%;
-	position: relative;
+.pup__body *:not(:last-child) {
+	margin: 0px 0px 45px 0px;
 }
-.pup__right {
-	flex: 0 0 50%;
+.pup__text {
+	font-size: 36px;
+	line-height: 1.17;
+	font-weight: 900;
+	color: #fff;
+}
+.pup__button {
+	align-self: flex-start;
 }
